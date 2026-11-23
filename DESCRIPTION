@@ -1,0 +1,21 @@
+Package: GOFER
+Type: Package
+Title: GOFER: Gene Ontology Functional Enrichment in R
+Version: 0.99.0
+Authors@R: person("Ehren", "Bentz", email = "ejb345@cornell.edu", role = c("aut", "cre"))
+Description: Tests Gene Ontology categories for enrichment in ranked gene
+    scores from differential expression analyses (for example DESeq2 results)
+    and in WGCNA co-expression modules. Methods are the Mann-Whitney U test on
+    gene ranks, Fisher's exact test on a significant gene set, and average
+    precision with a resampled null and a generalized Pareto tail. Annotations
+    are propagated through the current GO release (is_a and part_of), and every
+    run writes its result tables and a settings file to an output directory.
+License: GPL-3
+Encoding: UTF-8
+Depends: R (>= 4.5.0)
+Imports: methods, stats, utils, tools, parallel, graphics, grDevices, Matrix, BiocParallel, igraph, Rcpp, ggplot2
+LinkingTo: Rcpp
+Suggests: testthat (>= 3.0.0), knitr, rmarkdown, Rgraphviz, graph
+Config/testthat/edition: 3
+biocViews: GeneSetEnrichment, GO, DifferentialExpression, GeneExpression, Network, Software
+Config/roxygen2/version: 8.1.1
